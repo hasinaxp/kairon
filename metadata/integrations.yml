@@ -75,6 +75,9 @@ channels:
     required_fields:
       - channel_secret
       - channel_access_token
+  google_rcs:
+    required_fields:
+      - certificate
 
 actions:
   pipedrive:

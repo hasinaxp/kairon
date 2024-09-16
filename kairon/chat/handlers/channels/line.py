@@ -110,6 +110,7 @@ class LineOutput(OutputChannel):
         except Exception as e:
             raise Exception(f"Error in line send_custom_json {e}")
 
+
 class LineHandler(InputChannel, ChannelHandlerBase):
     """line input channel"""
     def __init__(self, bot: Text, user: User, request: Request):

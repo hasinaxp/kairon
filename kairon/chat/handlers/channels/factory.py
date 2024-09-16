@@ -1,6 +1,7 @@
 from typing import Text
 
 from kairon.chat.handlers.channels.business_messages import BusinessMessagesHandler
+from kairon.chat.handlers.channels.google_rcs import RCSHandler
 from kairon.chat.handlers.channels.hangouts import HangoutsHandler
 from kairon.chat.handlers.channels.messenger import MessengerHandler, InstagramHandler
 from kairon.chat.handlers.channels.msteams import MSTeamsHandler
@@ -22,7 +23,8 @@ class ChannelHandlerFactory:
         ChannelTypes.TELEGRAM.value: TelegramHandler,
         ChannelTypes.INSTAGRAM.value: InstagramHandler,
         ChannelTypes.BUSINESS_MESSAGES.value: BusinessMessagesHandler,
-        ChannelTypes.LINE.value: LineHandler
+        ChannelTypes.LINE.value: LineHandler,
+        ChannelTypes.GOOGLE_RCS.value: RCSHandler
     }
 
     @staticmethod
