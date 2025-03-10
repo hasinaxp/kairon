@@ -3360,6 +3360,11 @@ class MongoProcessor:
         if Utility.check_empty_string(name):
             raise AppException("path name cannot be empty or blank spaces")
 
+
+        if Utility.check_string_with_no_special_chars(name):
+            raise AppException(f"name [{name}] should not contain special characters")
+
+
         if not steps:
             raise AppException("steps are required")
 
@@ -3435,6 +3440,11 @@ class MongoProcessor:
         if Utility.check_empty_string(name):
             raise AppException("Story name cannot be empty or blank spaces")
 
+
+        if Utility.check_string_with_no_special_chars(name):
+            raise AppException(f"name [{name}] should not contain special characters")
+
+
         if not steps:
             raise AppException("steps are required")
         Utility.is_exist(
@@ -3497,6 +3507,9 @@ class MongoProcessor:
         if Utility.check_empty_string(name):
             raise AppException("path name cannot be empty or blank spaces")
 
+        if Utility.check_string_with_no_special_chars(name):
+            raise AppException(f"name [{name}] should not contain special characters")
+
         if not steps:
             raise AppException("steps are required")
 
@@ -3555,6 +3568,11 @@ class MongoProcessor:
 
         if Utility.check_empty_string(name):
             raise AppException("Story name cannot be empty or blank spaces")
+
+
+        if Utility.check_string_with_no_special_chars(name):
+            raise AppException(f"name [{name}] should not contain special characters")
+
 
         if not steps:
             raise AppException("steps are required")

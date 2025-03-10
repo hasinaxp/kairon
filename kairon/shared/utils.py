@@ -158,6 +158,23 @@ class Utility:
             return False
 
     @staticmethod
+    def check_string_with_no_special_chars(value: str, allowed_chars: str = "_"):
+        """
+        checks for special characters in string false if value is inalid
+
+        :param value: string value
+        :param allowed_chars: allowed special characters
+        :return: boolean
+        """
+        if not value:
+            return False
+        if isinstance(value, str) and re.match("^[a-zA-Z0-9" + allowed_chars + "]*$", value):
+            return True
+        else:
+            return False
+
+
+    @staticmethod
     def check_character_limit(value: str):
         """
         checks for character limit
