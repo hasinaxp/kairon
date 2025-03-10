@@ -158,7 +158,7 @@ class Utility:
             return False
 
     @staticmethod
-    def check_string_with_no_special_chars(value: str, allowed_chars: str = "_"):
+    def check_string_with_no_special_chars(value: str, allowed_chars: str = "_-"):
         """
         checks for special characters in string false if value is inalid
 
